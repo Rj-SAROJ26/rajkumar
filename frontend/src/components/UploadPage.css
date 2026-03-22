@@ -1,0 +1,277 @@
+/* Single-page upload + result + hospital layout */
+.upload-page-root {
+  --ink: #1f2937;
+  --muted: #52606d;
+  --bg-soft: #eef4f7;
+  --card: #ffffff;
+  --accent: #0f766e;
+  --accent-strong: #0d9488;
+  --warn-bg: #fff8db;
+  --warn-text: #6e4f00;
+  --stroke: #d6e0e6;
+
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 28px 16px 48px;
+  color: var(--ink);
+  scroll-behavior: smooth;
+}
+
+.section-wrap {
+  margin-top: 22px;
+}
+
+.card {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbfc 100%);
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(16, 24, 40, 0.06);
+}
+
+.hospital-highlight .hospital-card {
+  animation: pulse-glow 1.6s ease;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 rgba(15, 118, 110, 0);
+    border-color: var(--stroke);
+  }
+  35% {
+    box-shadow: 0 0 0 6px rgba(13, 148, 136, 0.18);
+    border-color: #6fd4cc;
+  }
+  100% {
+    box-shadow: 0 10px 24px rgba(16, 24, 40, 0.06);
+    border-color: var(--stroke);
+  }
+}
+
+.page-title {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  line-height: 1.25;
+}
+
+.section-subtitle {
+  margin: 8px 0 16px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.section-title {
+  margin: 0 0 14px;
+  font-size: 1.4rem;
+}
+
+.dropzone {
+  background: var(--bg-soft);
+  border: 2px dashed #9bb0bc;
+  border-radius: 14px;
+  padding: 26px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dropzone-active {
+  border-color: var(--accent-strong);
+  background: #e3f5f2;
+}
+
+.dropzone-copy {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.preview-wrap {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.preview-image {
+  width: min(100%, 340px);
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 6px 16px rgba(16, 24, 40, 0.15);
+}
+
+.file-meta {
+  color: var(--muted);
+  margin: 12px 0 0;
+}
+
+.upload-actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.ghost-btn,
+.map-btn {
+  border-radius: 10px;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 16px;
+  font-size: 0.98rem;
+}
+
+.primary-btn {
+  background: var(--accent-strong);
+  color: #fff;
+}
+
+.primary-btn:disabled {
+  cursor: not-allowed;
+  background: #9ab8b4;
+}
+
+.ghost-btn {
+  background: #e8eff3;
+  color: #213547;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.info-tile {
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  background: var(--card);
+  padding: 12px;
+}
+
+.tile-label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.detail-card {
+  margin-top: 12px;
+  background: #ffffff;
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.detail-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+}
+
+.detail-card p {
+  margin: 0;
+  line-height: 1.58;
+  color: #344054;
+}
+
+.precaution-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+  color: #344054;
+}
+
+.disclaimer-box {
+  margin-top: 12px;
+  background: var(--warn-bg);
+  color: var(--warn-text);
+  border: 1px solid #f3d48b;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.hospital-search-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.hospital-input {
+  width: 100%;
+  border: 1px solid #bfcdd6;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 1rem;
+}
+
+.hospital-results {
+  margin-top: 8px;
+}
+
+.input-error {
+  margin: 0 0 10px;
+  color: #c81e1e;
+  font-weight: 600;
+}
+
+.hospital-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.hospital-item {
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  padding: 12px;
+  background: var(--card);
+}
+
+.hospital-item h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.hospital-item p {
+  margin: 6px 0;
+  color: #344054;
+  line-height: 1.45;
+}
+
+.map-btn {
+  margin-top: 8px;
+  background: #155eef;
+  color: #fff;
+}
+
+.empty-message {
+  margin: 0;
+  color: #6b7280;
+  border: 1px dashed #bcc8d2;
+  border-radius: 12px;
+  padding: 14px;
+  background: #fafcfd;
+}
+
+@media (max-width: 760px) {
+  .card {
+    padding: 14px;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hospital-search-row {
+    grid-template-columns: 1fr;
+  }
+
+  .upload-actions {
+    flex-direction: column;
+  }
+}

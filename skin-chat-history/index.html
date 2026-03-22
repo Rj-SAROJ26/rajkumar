@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkinNet – Chat History</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar: History List -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Chat History</h3>
+                <button id="newChatBtn" class="btn-new">+ New Chat</button>
+            </div>
+            <div id="historyList" class="history-list"></div>
+            <div class="sidebar-footer">
+                <button id="clearAllBtn" class="btn-danger">Clear All</button>
+            </div>
+        </aside>
+
+        <!-- Main: Chat Interface -->
+        <main class="chat-main">
+            <header class="chat-header">
+                <h2 id="chatTitle">SkinNet AI Assistant</h2>
+                <span id="chatDate" class="chat-date"></span>
+            </header>
+
+            <div id="messageContainer" class="message-container"></div>
+
+            <footer class="chat-footer">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    placeholder="Ask about skin conditions..." 
+                    autocomplete="off"
+                />
+                <button id="sendBtn">Send</button>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

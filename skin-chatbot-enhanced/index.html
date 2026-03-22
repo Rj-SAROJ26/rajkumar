@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkinNet AI Chatbot - Enhanced</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="chatbot-container">
+        <!-- Header -->
+        <header class="chatbot-header">
+            <div class="header-content">
+                <h1>SkinNet AI Assistant</h1>
+                <p class="subtitle">Ask me anything about skin health</p>
+            </div>
+            <button id="clearBtn" class="btn-clear" title="Clear conversation">
+                <span>🗑️ Clear</span>
+            </button>
+        </header>
+
+        <!-- Messages Area -->
+        <div id="messagesContainer" class="messages-container">
+            <div class="message-welcome">
+                <h2>Welcome to SkinNet AI</h2>
+                <p>Ask questions about skin conditions, treatments, prevention, and more.</p>
+                <div class="quick-suggestions">
+                    <button class="suggestion-btn">What is eczema?</button>
+                    <button class="suggestion-btn">How to prevent acne?</button>
+                    <button class="suggestion-btn">Signs of melanoma?</button>
+                    <button class="suggestion-btn">Best skincare routine?</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <footer class="chatbot-footer">
+            <div class="input-wrapper">
+                <textarea 
+                    id="messageInput"
+                    class="message-input"
+                    placeholder="Ask about skin health..."
+                    rows="1"
+                ></textarea>
+                <button id="sendBtn" class="btn-send" title="Send message">
+                    <span>➤</span>
+                </button>
+            </div>
+            <p class="disclaimer">
+                💡 This AI provides general information. Always consult a dermatologist for medical advice.
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

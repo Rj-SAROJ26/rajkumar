@@ -1,0 +1,49 @@
+.formm-container {
+    margin-top:-120px;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid #20b2aa;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 128, 128, 0.15);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98));
+  }
+  
+  .kk {
+    text-align: center;
+    color: #008080;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .question {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(0, 128, 128, 0.05), rgba(32, 178, 170, 0.05));
+  }
+  
+  .options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  b22 {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #008080 0%, #20b2aa 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  b22:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 128, 128, 0.3);
+  }
+  

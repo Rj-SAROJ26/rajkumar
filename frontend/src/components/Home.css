@@ -1,0 +1,431 @@
+.home-page {
+  min-height: 100vh;
+  padding: 24px 24px 48px;
+  background:
+    radial-gradient(circle at top left, rgba(91, 212, 255, 0.2), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(52, 119, 255, 0.22), transparent 32%),
+    linear-gradient(135deg, #041733 0%, #0a2d5a 46%, #06142d 100%);
+  color: #ecf7ff;
+}
+
+.home-hero-shell,
+.home-stats,
+.home-diseases {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.home-hero-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 28px;
+  border: 1px solid rgba(112, 204, 255, 0.28);
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(5, 31, 69, 0.92), rgba(10, 61, 125, 0.72));
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(163, 232, 255, 0.06);
+  overflow: hidden;
+}
+
+.home-hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(113, 223, 255, 0.06) 50%, transparent 100%),
+    radial-gradient(circle at top center, rgba(80, 216, 255, 0.18), transparent 30%);
+  pointer-events: none;
+}
+
+.home-hero-visual,
+.home-hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-visual-left,
+.hero-visual-right {
+  min-height: 320px;
+}
+
+.hero-visual-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(17, 46, 95, 0.78), rgba(6, 28, 68, 0.82));
+  border: 1px solid rgba(100, 209, 255, 0.22);
+  overflow: hidden;
+}
+
+.home-hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(92, 186, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(92, 186, 255, 0.12) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(circle at center, black 48%, transparent 100%);
+}
+
+.hero-rash-illustration {
+  width: min(280px, 100%);
+  object-fit: contain;
+  filter: drop-shadow(0 24px 26px rgba(0, 0, 0, 0.35));
+}
+
+.home-hero-copy {
+  text-align: center;
+  padding: 8px 10px;
+}
+
+.hero-kicker,
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(117, 223, 255, 0.28);
+  background: rgba(74, 175, 255, 0.12);
+  color: #92efff;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-hero-copy h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1.08;
+  color: #f6fbff;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.32);
+}
+
+.home-hero-copy p {
+  margin: 0 auto;
+  max-width: 520px;
+  color: #d3ecff;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 26px 0 18px;
+}
+
+.hero-primary-link,
+.hero-secondary-link {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-primary-button,
+.hero-secondary-button {
+  min-width: 210px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-primary-button {
+  color: #effcff;
+  background: linear-gradient(135deg, #00d2d0, #2eb8ff 55%, #ff6b45 100%);
+  box-shadow: 0 14px 30px rgba(0, 184, 255, 0.24);
+}
+
+.hero-secondary-button {
+  color: #dff7ff;
+  background: rgba(8, 27, 61, 0.72);
+  border: 1px solid rgba(121, 219, 255, 0.28);
+  box-shadow: inset 0 0 0 1px rgba(165, 228, 255, 0.06);
+}
+
+.hero-primary-button:hover,
+.hero-secondary-button:hover {
+  transform: translateY(-2px);
+}
+
+.hero-primary-button:hover {
+  box-shadow: 0 18px 34px rgba(0, 184, 255, 0.34);
+}
+
+.hero-secondary-button:hover {
+  border-color: rgba(130, 233, 255, 0.5);
+}
+
+.hero-disclaimer {
+  font-size: 0.9rem;
+  color: #9ccdea;
+}
+
+.hero-visual-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-preview-frame {
+  position: relative;
+  width: 100%;
+  max-width: 330px;
+  padding: 14px;
+  border-radius: 24px;
+  border: 1px solid rgba(130, 231, 255, 0.22);
+  background: linear-gradient(180deg, rgba(15, 56, 113, 0.8), rgba(4, 24, 62, 0.92));
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.28);
+}
+
+.hero-phone-preview {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(136, 240, 255, 0.8), rgba(81, 153, 255, 0));
+  pointer-events: none;
+}
+
+.hero-orb-one {
+  width: 120px;
+  height: 120px;
+  top: -18px;
+  right: -12px;
+}
+
+.hero-orb-two {
+  width: 90px;
+  height: 90px;
+  left: -18px;
+  bottom: -12px;
+}
+
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 22px 24px;
+  border-radius: 22px;
+  border: 1px solid rgba(109, 204, 255, 0.2);
+  background: linear-gradient(145deg, rgba(9, 32, 73, 0.84), rgba(9, 63, 136, 0.68));
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #8cefff;
+}
+
+.stat-label {
+  color: #d2e9ff;
+  font-weight: 600;
+}
+
+.home-diseases {
+  margin-top: 38px;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 28px;
+}
+
+.section-heading h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: #f4fbff;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #c6e6ff;
+  line-height: 1.75;
+}
+
+.disease-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.disease-group-card {
+  padding: 22px;
+  border-radius: 24px;
+  border: 1px solid rgba(114, 210, 255, 0.24);
+  background: linear-gradient(160deg, rgba(13, 42, 91, 0.92), rgba(16, 82, 153, 0.7));
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.group-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.group-count {
+  color: #d0e9ff;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.fungal .group-badge {
+  background: rgba(0, 222, 183, 0.16);
+  color: #8dffe0;
+}
+
+.bacterial .group-badge {
+  background: rgba(78, 169, 255, 0.15);
+  color: #9ad4ff;
+}
+
+.viral .group-badge {
+  background: rgba(177, 117, 255, 0.16);
+  color: #d8bbff;
+}
+
+.parasitic .group-badge {
+  background: rgba(255, 167, 82, 0.14);
+  color: #ffd1a0;
+}
+
+.group-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.disease-tile {
+  padding: 18px;
+  min-height: 220px;
+  border-radius: 20px;
+  border: 1px solid rgba(140, 219, 255, 0.18);
+  background: linear-gradient(180deg, rgba(10, 33, 72, 0.9), rgba(8, 24, 54, 0.95));
+  box-shadow: inset 0 0 0 1px rgba(170, 230, 255, 0.05);
+}
+
+.disease-tile h3 {
+  margin: 0 0 8px;
+  color: #f6fbff;
+  font-size: 1.15rem;
+}
+
+.disease-tile p {
+  margin: 0 0 12px;
+  color: #88ddff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.disease-tile ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #d8efff;
+  line-height: 1.7;
+}
+
+.disease-tile li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 1100px) {
+  .home-hero-panel {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-visual-left,
+  .hero-visual-right {
+    min-height: auto;
+  }
+
+  .hero-preview-frame {
+    max-width: 420px;
+  }
+
+  .disease-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .home-page {
+    padding: 18px 14px 32px;
+  }
+
+  .home-hero-panel {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-primary-button,
+  .hero-secondary-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .home-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .group-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .group-tiles {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-phone-preview {
+    height: 220px;
+  }
+}

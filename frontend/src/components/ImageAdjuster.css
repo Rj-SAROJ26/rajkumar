@@ -1,0 +1,129 @@
+.image-adjuster {
+  width: 100%;
+  display: grid;
+  gap: 12px;
+}
+
+.image-adjuster__viewport {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  height: 300px;
+  border-radius: 14px;
+  border: 1px solid rgba(98, 198, 255, 0.35);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(232, 245, 255, 0.08)
+  );
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-adjuster__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+
+.image-adjuster__controls {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.image-adjuster__arrow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 44px);
+  grid-template-rows: repeat(2, 44px);
+  gap: 8px;
+}
+
+.image-adjuster__btn {
+  border: 1px solid rgba(94, 183, 255, 0.5);
+  background: rgba(10, 82, 148, 0.12);
+  color: #103b66;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.image-adjuster__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(12, 95, 160, 0.2);
+  background: rgba(12, 102, 174, 0.2);
+}
+
+.image-adjuster__btn:active {
+  transform: translateY(0);
+}
+
+.image-adjuster__btn--up {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.image-adjuster__btn--left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.image-adjuster__btn--down {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.image-adjuster__btn--right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.image-adjuster__utility {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.image-adjuster__btn--zoom {
+  width: 44px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.image-adjuster__reset {
+  border: 1px solid rgba(53, 143, 214, 0.55);
+  background: linear-gradient(135deg, #ecf7ff, #dcefff);
+  color: #0f4877;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: box-shadow 0.16s ease, transform 0.16s ease;
+}
+
+.image-adjuster__reset:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(27, 111, 176, 0.2);
+}
+
+@media (max-width: 768px) {
+  .image-adjuster__viewport {
+    min-height: 220px;
+    height: 240px;
+  }
+}

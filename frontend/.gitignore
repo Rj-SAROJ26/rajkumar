@@ -1,0 +1,17 @@
+node_modules/
+frontend/node_modules/
+ml/node_modules/
+
+# caches
+.cache/
+frontend/.cache/
+
+# env
+.env
+
+# build
+dist/
+build/
+
+# logs
+*.log
