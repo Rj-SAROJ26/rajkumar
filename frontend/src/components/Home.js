@@ -67,6 +67,14 @@ function HomePage() {
               <Link to="/chatbot" className="hero-primary-link hero-primary-button">
                 {t('home.chatCta')}
               </Link>
+              <a
+                href="https://rajkumar-8.onrender.com"
+                className="hero-primary-link hero-primary-button"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Live Link
+              </a>
             </div>
             <p className="hero-disclaimer">{t('home.disclaimer')}</p>
           </div>
